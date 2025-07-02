@@ -41,9 +41,9 @@ const HowItWorkSection = () => {
 
                             <div className="flex flex-col md:flex-row items-center justify-center max-w-6xl mx-auto">
                                 {steps.map((step, index) => (
-                                    <>
+                                    <div key={step.id}>
                                         <div
-                                            key={step.id}
+                                          
                                             className={`group bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 hover:border-indigo-200 hover:bg-indigo-600 hover:text-white ${index === 1 ? 'md:mt-10' : index === 2 ? 'md:mt-20' : ''}`}
                                             style={{width: '300px'}}
                                         >
@@ -60,7 +60,7 @@ const HowItWorkSection = () => {
                                                 <BsArrowRight className="text-3xl transform rotate-45" />
                                             </div>
                                         )}
-                                    </>
+                                    </div>
                                 ))}
                             </div>
                         </div>
